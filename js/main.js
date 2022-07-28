@@ -22,44 +22,36 @@ function solicitarMail() {
 solicitarMail();
 
 function solicitarProducto() {
-  let productoIngresado = prompt("Selecccione el producto que desea: Cuadro, Florero, Lampara, Jarron, Espejo");
+  let productoIngresado = prompt(
+    "Selecccione el producto que desea: Cuadro, Florero, Lampara, Jarron, Espejo"
+  );
   alert("El Producto seleccionado es " + productoIngresado);
 }
 /* Productos con descuentos */
 
-class Producto{
-  constructor (nombre,precio) {
+class Producto {
+  constructor(nombre, precio) {
     this.nombre = nombre.toUpperCase();
-    this.precio = parseFloat (precio);
+    this.precio = parseFloat(precio);
     this.vendido = false;
-    
   }
-  descuento (){
-    this.precio = this.precio - (this.precio * 0,10);
- }
+  descuento() {
+    this.precio = this.precio - (this.precio * 0, 10);
+  }
 }
 const productos = [];
-productos.push(new Producto ("Cuadro", "3450"));
+productos.push(new Producto("Cuadro", "3450"));
 productos.push(new Producto("Florero", "560"));
 productos.push(new Producto("Lampara", "900"));
 productos.push(new Producto("Jarron", "2800"));
 productos.push(new Producto("Espejo", "1500"));
 console.log(productos);
 
-
 for (const Producto of productos) {
   Producto.descuento();
-  console.log( " " + Producto.nombre + " : $" + Producto.precio);
-alert( " " + Producto.nombre + " : $" + Producto.precio);
- }
-  
+  console.log(" " + Producto.nombre + " : $" + Producto.precio);
+  alert(" " + Producto.nombre + " : $" + Producto.precio);
+}
 
 solicitarProducto();
- alert("Solo acepta pago por debito, al ser producto seleccionado")
-
-
-
-
-
-
-
+alert("Solo acepta pago por debito, al ser producto seleccionado");
